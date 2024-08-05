@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadPro AI - Supercharge Your Lead Generation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">LeadPro AI</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#get-started" class="cta-button">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>AI-Powered Lead Generation</h1>
+            <p>10x your leads. Automate your outreach. Skyrocket your sales.</p>
+            <h2>Just $1 per appointment!</h2>
+        </section>
+
+        <section id="features" class="features">
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Smart Targeting</h3>
+                <p>AI-driven lead identification based on your ideal customer profile.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📈</div>
+                <h3>Automated Campaigns</h3>
+                <p>Set it and forget it. Our AI manages your email outreach.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤝</div>
+                <h3>Appointment Scheduler</h3>
+                <p>Seamlessly book meetings with qualified leads.</p>
+            </div>
+        </section>
+
+        <section id="get-started" class="get-started">
+            <h2>Get Started Now</h2>
+            <form id="lead-form-step1">
+                <input type="text" id="niche" placeholder="Your Niche" required>
+                <input type="text" id="location" placeholder="Location of your Niche">
+                <input type="url" id="website" placeholder="Your Website URL" required>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <textarea id="offer" placeholder="Specify Your Offer (Optional)"></textarea>
+                <button type="submit">Next Step</button>
+            </form>
+            <form id="lead-form-step2" style="display: none;">
+                <h3>Set Up Gmail Access</h3>
+                <p>To automate your email campaigns, we need access to your Gmail account. Follow these steps to create an App Password:</p>
+                <ol class="app-password-steps">
+                    <li>Go to your Google Account settings.</li>
+                    <li>Navigate to the Security section.</li>
+                    <li>Under "Signing in to Google," select "App Passwords."</li>
+                    <li>Generate a new App Password for "Mail" and "Other (Custom name)."</li>
+                    <li>Copy the generated password and paste it below.</li>
+                </ol>
+                <input type="email" id="gmail" placeholder="Your Gmail Address" required>
+                <input type="password" id="app-password" placeholder="Your Gmail App Password" required>
+                <button type="submit">Start Your Campaign</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LeadPro AI. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "better-queue": "^3.8.12",
+    "cache-manager": "^5.7.3",
+    "cache-manager-fs-hash": "^2.0.0",
+    "delay": "^6.0.0",
+    "proxy-agent": "^6.4.0",
+    "winston": "^3.13.1"
+  }
+}

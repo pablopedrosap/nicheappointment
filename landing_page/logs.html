@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Logs - LeadPro AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">LeadPro AI</div>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="logs">
+            <h2>Campaign Logs</h2>
+            <div id="logs-container"></div>
+        </section>
+        <section class="crm">
+            <h2>CRM Data</h2>
+            <div id="crm-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LeadPro AI. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='logs.js') }}"></script>
+</body>
+</html>
