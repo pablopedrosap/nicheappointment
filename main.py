@@ -128,53 +128,6 @@ def main(niche, location, user_site, user_name, custom_offer, gmail, app_passwor
         if callback:
             callback(f"Completed processing for query: {query}")
 
-# @app.route('/api/start-campaign', methods=['POST', 'GET'])
-# def start_campaign():
-#     if request.method == 'POST':
-#         data = request.json
-#
-#         def generate():
-#             def callback(message):
-#                 yield f"data: {json.dumps({'type': 'log', 'message': message})}\n\n"
-#
-#             try:
-#                 # Register user
-#                 register_user(
-#                     niche=data['niche'],
-#                     location=data['location'],
-#                     website=data['website'],
-#                     name=data['name'],
-#                     offer=data['offer'],
-#                     gmail=data['gmail']
-#                 )
-#                 yield f"data: {json.dumps({'type': 'log', 'message': 'User registered'})}\n\n"
-#
-#                 # Start the main process
-#                 main(
-#                     niche=data['niche'],
-#                     location=data['location'],
-#                     user_site=data['website'],
-#                     user_name=data['name'],
-#                     custom_offer=data['offer'],
-#                     gmail=data['gmail'],
-#                     app_password=data['appPassword'],
-#                     callback=callback
-#                 )
-#                 yield f"data: {json.dumps({'type': 'status', 'message': 'Campaign completed'})}\n\n"
-#             except Exception as e:
-#                 yield f"data: {json.dumps({'type': 'error', 'message': str(e)})}\n\n"
-#             finally:
-#                 yield f"data: {json.dumps({'type': 'status', 'message': 'Campaign finished'})}\n\n"
-#
-#         return Response(stream_with_context(generate()), mimetype='text/event-stream')
-#
-#     elif request.method == 'GET':
-#         def generate():
-#             yield f"data: {json.dumps({'type': 'status', 'message': 'SSE connection established'})}\n\n"
-#
-#         return Response(generate(), mimetype='text/event-stream')
-
-
 @app.route('/api/start-campaign', methods=['POST'])
 def start_campaign():
     data = request.json

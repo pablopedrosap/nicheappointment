@@ -1,0 +1,10 @@
+.env
+*.csv
+*.xlsx
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+.idea/
+.venv/
+data/raw/
